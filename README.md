@@ -1,6 +1,4 @@
-```bash
-/root/erigon/build/bin/erigon --help
-
+docker run --rm erigontech/erigon:latest --help
 NAME:
    erigon - erigon
 
@@ -8,7 +6,7 @@ USAGE:
    erigon [command] [flags]
 
 VERSION:
-   3.0.4-406d855f
+   3.0.5-42cc7e37
 
 COMMANDS:
    init                      Bootstrap and initialize a new genesis block
@@ -18,8 +16,8 @@ COMMANDS:
    help, h                   Shows a list of commands or help for one command
 
 GLOBAL OPTIONS:
-   --datadir value                                                                  Data directory for the databases (default: /root/.local/share/erigon)
-   --ethash.dagdir value                                                            Directory to store the ethash mining DAGs (default: /root/.local/share/erigon-ethash)
+   --datadir value                                                                  Data directory for the databases (default: /home/erigon/.local/share/erigon)
+   --ethash.dagdir value                                                            Directory to store the ethash mining DAGs (default: /home/erigon/.local/share/erigon-ethash)
    --externalcl                                                                     Enables the external consensus layer (default: false)
    --txpool.disable                                                                 External pool and block producer, see ./cmd/txpool/readme.md for more info. Disabling internal txpool and block producer. (default: false)
    --txpool.pricelimit value                                                        Minimum gas price (fee cap) limit to enforce for acceptance into the pool (default: 1)
@@ -153,7 +151,7 @@ GLOBAL OPTIONS:
    --mine                                                                           Enable mining (default: false)
    --proposer.disable                                                               Disables PoS proposer (default: false)
    --miner.notify value                                                             Comma separated HTTP URL list to notify of new work packages
-   --miner.gaslimit value                                                           Target gas limit for mined blocks (default: 36000000)
+   --miner.gaslimit value                                                           Target gas limit for mined blocks (default: 0)
    --miner.etherbase value                                                          Public address for block mining rewards (default: "0")
    --miner.extradata value                                                          Block extra data set by the miner (default = client version)
    --miner.noverify                                                                 Disable remote sealing verification (default: false)
@@ -264,4 +262,3 @@ GLOBAL OPTIONS:
    --config value                                                                   Sets erigon flags from YAML/TOML file
    --help, -h                                                                       show help
    --version, -v                                                                    print the version
-```
